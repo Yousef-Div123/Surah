@@ -1,6 +1,6 @@
 import random
 
-list = {
+soras = {
     'الفاتحة' : 7,
     'الاعراف' : 206,
     'الانفال' : 75,
@@ -13,12 +13,13 @@ list = {
     'النحل' : 128,
     'الاسراء' : 111
 }
-soras = ['الفاتحة','الاعراف','الانفال','يونس','هود','يوسف','الرعد','ابراهيم','الحجر','النحل','الاسراء']
 
 
+
+keys = list(soras.keys())
 while True:
-    sora = random.choice(soras)
-    question = list[sora]
+    sora = random.choice(keys)
+    question = soras[sora]
     print(sora)
     answer = input('')
 
@@ -26,6 +27,7 @@ while True:
         print("correct")
     else:
         print(f"Wrong the answer is {question}.")
+        
     
 
 
